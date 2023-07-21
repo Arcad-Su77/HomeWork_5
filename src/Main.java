@@ -1,6 +1,4 @@
 import javax.swing.*;
-import java.util.Arrays;
-import java.util.Scanner;
 import java.time.Year;
 
 public class Main {
