@@ -1,6 +1,4 @@
 import javax.swing.*;
-import java.util.Arrays;
-import java.util.Scanner;
 import java.time.Year;
 
 public class Main {
@@ -57,14 +55,16 @@ public class Main {
         System.out.println("Задание 4");
         //Инициализация
         int deliveryDey = 1;
+        String deliveryMessag = "Потребуется дней: ";
         int deliveryDistance = Integer.parseInt(JOptionPane.showInputDialog(null,
                 "Введите расстояние от офиса до клиента:"));
         //Решение
         if (deliveryDistance > 20 ) deliveryDey += 1;
         if (deliveryDistance > 60 ) deliveryDey += 1;
-        if (deliveryDistance < 100 ) deliveryDey += 1;
+        if (deliveryDistance > 100 ) deliveryDey = 0;
+        deliveryMessag = deliveryMessag + ((deliveryDey!=0) ? deliveryDey : "Доставка не предусмотренна");
         //Вывод
-        System.out.println("Потребуется дней: " + deliveryDey);
+        System.out.println(deliveryMessag);
     }
 
     private static void task3() {
